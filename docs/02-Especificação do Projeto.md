@@ -2,25 +2,36 @@
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Este documento apresenta as especificações do projeto IMC Pro, uma plataforma digital para monitoramento do Índice de Massa Corporal e promoção de bem-estar. Utilizamos técnicas como definição de personas, histórias de usuários, modelagem de processos e requisitos funcionais/não funcionais para detalhar a solução.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+1. Ana Clara Santos
+*32 anos, professora universitária
+*Sedentária devido à rotina intensa de trabalho
+*Interessada em melhorar hábitos alimentares e praticar exercícios
+*Necessidades: Monitorar IMC, receber orientações personalizadas, conteúdo confiável sobre saúde
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+2. Carlos Eduardo Mendes
+*45 anos, empresário
+*Diagnosticado com pré-diabetes
+*Busca controlar peso e prevenir doenças crônicas
+*Necessidades: Acompanhamento médico integrado, alertas sobre IMC, histórico de progresso
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+3. Dra. Juliana Fernandes
+*38 anos, nutricionista
+*Atende pacientes com necessidades nutricionais diversas
+*Necessidades: Plataforma para enviar planos alimentares, compartilhar conteúdo educativo, acompanhar pacientes
+
+4. Ricardo Almeida
+*29 anos, personal trainer
+*Especializado em condicionamento físico
+*Necessidades: Recomendar exercícios personalizados, acompanhar evolução de alunos, compartilhar rotinas de treino
+
+5. Administrador IMC Pro
+*Responsável pela gestão da plataforma
+*Necessidades: Monitorar estatísticas de uso, gerenciar contas de profissionais, garantir funcionamento do sistema
+
 
 ## Histórias de Usuários
 
@@ -28,43 +39,55 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Usuário do sistema  | Calcular meu IMC          | Acompanhar minha evolução física e avaliar se meu peso está adequado               |
+|Usuário do sistema       | Ter um histórico de meus cálculos                |Monitorar meu progresso ao longo do tempo |
+|Usuário Comum	   | Receber recomendações personalizadas	  | Melhorar minha saúde com base nas minhas necessidades específicas   |
+| Nutricionista	| Compartilhar informações sobre alimentação saudável	| Auxiliar usuários a manterem dieta equilibrada |
+| Treinador | 	Recomendar rotinas de exercícios personalizadas	| Garantir que usuários sigam treinos adequados | 
+| Administrador | 	Ver estatísticas de usuários	| Monitorar o crescimento e utilização da plataforma| 
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Modelagem do Processo de Negócio 
 
-### Análise da Situação Atual
+**Análise da Situação Atual**
+Atualmente, pessoas interessadas em monitorar seu IMC utilizam calculadoras básicas disponíveis na internet, sem integração com acompanhamento profissional ou histórico de evolução. Profissionais da saúde não possuem uma plataforma centralizada para acompanhar pacientes.
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+**Descrição Geral da Proposta**
+O IMC Pro oferecerá uma solução integrada com:
 
-### Descrição Geral da Proposta
+Calculadora de IMC avançada
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Acompanhamento histórico
 
-### Processo 1 – NOME DO PROCESSO
+Conexão com profissionais de saúde
+
+Conteúdo educativo
+
+Recomendações personalizadas
+
+### Processo 1 - Cálculo e Monitoramento de IMC
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
 ![Processo 1](img/02-bpmn-proc1.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – Acompanhamento por Profissionais
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
 ![Processo 2](img/02-bpmn-proc2.png)
 
 ## Indicadores de Desempenho
+Indicadores de Desempenho
+Tempo médio para cálculo de IMC (< 5s)
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+Número de usuários ativos mensais
+
+Taxa de retorno de usuários (≥ 70%)
+
+Número de recomendações enviadas por profissional
+
+Satisfação do usuário (≥ 4/5)
 
 Usar o seguinte modelo: 
 
