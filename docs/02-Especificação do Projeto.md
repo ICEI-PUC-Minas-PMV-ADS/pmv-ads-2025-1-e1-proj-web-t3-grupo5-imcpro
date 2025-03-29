@@ -6,31 +6,45 @@ Este documento apresenta as especificações do projeto IMC Pro, uma plataforma 
 
 ## Personas
 
-1. Ana Clara Santos
-*32 anos, professora universitária
-*Sedentária devido à rotina intensa de trabalho
-*Interessada em melhorar hábitos alimentares e praticar exercícios
-*Necessidades: Monitorar IMC, receber orientações personalizadas, conteúdo confiável sobre saúde
+### 1. Ana Carolina Silva
+- **Idade:** 32 anos
+- **Profissão:** Professora de ensino fundamental
+- **Motivação:** Busca melhorar sua saúde após diagnóstico de pré-diabetes
+- **Necessidades:** 
+  - Monitorar IMC regularmente
+  - Receber orientações nutricionais simples
+  - Acompanhar progresso de forma visual
+  - Alertas sobre mudanças significativas no peso
 
-2. Carlos Eduardo Mendes
-*45 anos, empresário
-*Diagnosticado com pré-diabetes
-*Busca controlar peso e prevenir doenças crônicas
-*Necessidades: Acompanhamento médico integrado, alertas sobre IMC, histórico de progresso
+### 2. Carlos Eduardo Mendes
+- **Idade:** 45 anos
+- **Profissão:** Executivo de vendas
+- **Motivação:** Quer reduzir risco cardiovascular após infarto leve
+- **Necessidades:**
+  - Acesso rápido à calculadora de IMC
+  - Recomendações de exercícios para viagens
+  - Histórico de evolução para mostrar ao médico
+  - Contato com profissionais de saúde
 
-3. Dra. Juliana Fernandes
-*38 anos, nutricionista
-*Atende pacientes com necessidades nutricionais diversas
-*Necessidades: Plataforma para enviar planos alimentares, compartilhar conteúdo educativo, acompanhar pacientes
+### 3. Dra. Juliana Almeida
+- **Idade:** 38 anos
+- **Profissão:** Nutricionista esportiva
+- **Motivação:** Busca plataforma para acompanhar pacientes remotamente
+- **Necessidades:**
+  - Cadastrar planos alimentares personalizados
+  - Visualizar progresso dos pacientes
+  - Compartilhar materiais educativos
+  - Sistema seguro para dados de saúde
 
-4. Ricardo Almeida
-*29 anos, personal trainer
-*Especializado em condicionamento físico
-*Necessidades: Recomendar exercícios personalizados, acompanhar evolução de alunos, compartilhar rotinas de treino
-
-5. Administrador IMC Pro
-*Responsável pela gestão da plataforma
-*Necessidades: Monitorar estatísticas de uso, gerenciar contas de profissionais, garantir funcionamento do sistema
+### 4. Rodrigo Costa
+- **Idade:** 28 anos
+- **Profissão:** Personal trainer
+- **Motivação:** Quer expandir atendimento online
+- **Necessidades:**
+  - Criar rotinas de exercícios por objetivos
+  - Acompanhar evolução física de clientes
+  - Integração com wearables
+  - Chat para tirar dúvidas
 
 
 ## Histórias de Usuários
@@ -100,17 +114,29 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+| ID | Descrição | Prioridade |
+|----|-----------|------------|
+| RF-01 | Calculadora de IMC com entrada de peso e altura | Alta |
+| RF-02 | Sistema de cadastro/login de usuários | Alta |
+| RF-03 | Perfil de usuário com dados pessoais e de saúde | Alta |
+| RF-04 | Histórico de cálculos de IMC com gráficos | Média |
+| RF-05 | Sistema de alertas para valores críticos de IMC | Alta |
+| RF-06 | Módulo para nutricionistas cadastrarem dietas | Alta |
+| RF-07 | Módulo para treinadores criarem rotinas de exercícios | Alta |
+| RF-08 | Painel administrativo com estatísticas | Média |
+| RF-09 | Biblioteca de conteúdos educativos | Baixa |
+| RF-10 | Sistema de notificações e lembretes | Média |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+| ID | Descrição | Prioridade |
+|----|-----------|------------|
+| RNF-01 | Tempo de resposta abaixo de 3 segundos | Alta |
+| RNF-02 | Compatibilidade com dispositivos móveis | Alta |
+| RNF-03 | Segurança de dados com criptografia | Alta |
+| RNF-04 | Acessibilidade (tamanho de fonte ajustável) | Média |
+| RNF-05 | Modos claro e escuro | Média |
+| RNF-06 | Disponibilidade 24/7 | Alta |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -129,12 +155,12 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+| ID | Restrição |
+|----|-----------|
+| 01 | Desenvolvimento em linguagens web modernas |
+| 02 | Banco de dados relacional para armazenamento seguro |
+| 03 | Conformidade com LGPD para dados de saúde |
+| 04 | Integração com APIs de saúde limitadas |
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
@@ -144,22 +170,46 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Diagrama de Casos de Uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffdfd3', 'edgeLabelBackground':'#fff', 'tertiaryColor': '#dcd0ff'}}}%%
+useCaseDiagram
+    actor Usuário
+    actor Nutricionista
+    actor Treinador
+    actor Administrador
+    
+    Usuário --> (Calcular IMC)
+    Usuário --> (Visualizar histórico)
+    Usuário --> (Receber recomendações)
+    Usuário --> (Configurar alertas)
+    
+    Nutricionista --> (Cadastrar dietas)
+    Nutricionista --> (Acompanhar pacientes)
+    
+    Treinador --> (Criar rotinas)
+    Treinador --> (Monitorar progresso)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
-
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+    Administrador --> (Gerenciar usuários)
+    Administrador --> (Visualizar estatísticas)
+    
+    note right of Usuário: Usuários comuns podem\nacessar funcionalidades básicas\nde monitoramento
+    note left of Nutricionista: Profissionais de nutrição\ntêm acesso a ferramentas\npara acompanhamento
+```
 
 # Matriz de Rastreabilidade
 
 A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
 
 A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
+
+| ID Requisito | Objetivo | História de Usuário | Caso de Uso |
+|--------------|----------|---------------------|-------------|
+| RF-01 | Monitoramento básico | Calcular meu IMC | Calcular IMC |
+| RF-02 | Segurança e personalização | Criar perfil | Cadastro/Login |
+| RF-04 | Acompanhamento contínuo | Ver histórico | Visualizar histórico |
+| RF-05 | Prevenção de riscos | Alertas críticos | Configurar alertas |
+| RF-06 | Orientação profissional | Dietas personalizadas | Cadastrar dietas |
+| RF-10 | Engajamento | Notificações | Sistema de alertas |
 
 ![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
 
@@ -185,12 +235,23 @@ O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utiliz
 
 ## Gerenciamento de Equipe
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+| Nome | Função | Responsabilidades |
+|------|--------|-------------------|
+| Arthur Messeder Jacques | Dev Front-end |  |
+| Hideki Yukinory Pacheco Ishi | Dev Back-end |  |
+| Johnata de Souza do Amparo | DB Specialist |  |
+| Matheus Henrique Pereira Cruz | UX/UI Designer |  |
+| Sara Christine Mendoza | QA Engineer | |
 
 ![Simple Project Timeline](img/02-project-timeline.png)
 
 ## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
-
-![Orçamento](img/02-orcamento.png)
+| Item | Custo Estimado (R$) |
+|------|---------------------|
+| Desenvolvimento | 45.000 |
+| Infraestrutura | 12.000 |
+| Design/UX | 8.000 |
+| Testes | 6.000 |
+| Contingência | 5.000 |
+| **Total** | **76.000** |
